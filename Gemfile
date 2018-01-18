@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'pg', '~> 0.20'
+# Use sqlite3 as the database for Active Record
+ gem 'sqlite3', group: :development # Added development group.
+ gem 'rails_12factor'
+gem 'pg', '~> 0.20', group: :production # Added postgres and made it production only.
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
